@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link" href="/">Upload</a>
+                    <a class="nav-link" href="/highlight">Highlight</a>
+                    <a class="nav-link active" href="/visualization">Visualizations</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <h1>Visualizations</h1>
+                <button>Visualization 1</button>
+                <button>Visualization 2</button>
+                <button>Visualization 3</button>
+                <button>Visualization 4</button>
+                <button>Visualization 5</button>
+            </div>
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+</body>
+</html>

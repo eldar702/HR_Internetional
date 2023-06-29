@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highlight Words</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link" href="/">Upload</a>
+                    <a class="nav-link active" href="/highlight">Highlight</a>
+                    <a class="nav-link" href="/visualization">Visualizations</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <h1>Highlight Words</h1>
+                <form method="POST">
+                    <input type="submit" value="Highlight">
+                </form>
+            </div>
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+</body>
+</html>
