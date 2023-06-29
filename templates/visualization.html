@@ -2,10 +2,9 @@
 <html>
 <head>
     <title>Visualizations</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
+<body class="page3">
     <div class="container">
         <div class="row">
             <div class="col-3">
@@ -13,15 +12,16 @@
                     <a class="nav-link" href="/">Upload</a>
                     <a class="nav-link" href="/highlight">Highlight</a>
                     <a class="nav-link active" href="/visualization">Visualizations</a>
+                    <a class="nav-link" href="/prediction">Prediction</a>
                 </div>
             </div>
             <div class="col-9">
                 <h1>Visualizations</h1>
-                <button>Visualization 1</button>
-                <button>Visualization 2</button>
-                <button>Visualization 3</button>
-                <button>Visualization 4</button>
-                <button>Visualization 5</button>
+                <button onclick="location.href='/visualization_1'">Visualization 1</button>
+                <button onclick="location.href='/visualization_2'">Visualization 2</button>
+                <button onclick="location.href='/visualization_3'">Visualization 3</button>
+                <button onclick="location.href='/visualization_4'">Visualization 4</button>
+                <button onclick="location.href='/visualization_5'">Visualization 5</button>
             </div>
         </div>
     </div>

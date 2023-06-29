@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="page4">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link" href="/">Upload</a>
+                    <a class="nav-link" href="/highlight">Highlight</a>
+                    <a class="nav-link" href="/visualization">Visualizations</a>
+                    <a class="nav-link active" href="/prediction">Prediction</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <h1>Prediction</h1>
+                <button onclick="location.href='/predict'">Predict</button>
+                {% if prediction %}
+                    <h2>Prediction: {{ prediction }}</h2>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+</body>
+</html>

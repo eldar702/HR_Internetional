@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Upload Resume</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Upload</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
+<body class="page1">
     <div class="container">
         <div class="row">
             <div class="col-3">
@@ -13,13 +12,14 @@
                     <a class="nav-link active" href="/">Upload</a>
                     <a class="nav-link" href="/highlight">Highlight</a>
                     <a class="nav-link" href="/visualization">Visualizations</a>
+                    <a class="nav-link" href="/prediction">Prediction</a>
                 </div>
             </div>
             <div class="col-9">
-                <h1>Upload Resume</h1>
-                <form method="POST" action="/uploader" enctype="multipart/form-data">
-                    <input type="file" name="file">
-                    <input type="submit" value="Upload">
+                <h1>Upload</h1>
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="resume">
+                    <input type="submit">
                 </form>
             </div>
         </div>
