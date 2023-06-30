@@ -19,7 +19,7 @@ body {
 }
 
 .page3 {
-    background: url('images/background3.jpg') no-repeat center center fixed;
+    background: url('images/background4.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -50,8 +50,10 @@ body {
 }
 
 .nav-link {
-    color: #333;
+
+    color: #fff;
     margin-bottom: 10px;
+
 }
 
 .nav-link.active {

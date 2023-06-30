@@ -9,18 +9,16 @@
         <div class="row">
             <div class="col-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link" href="/">Upload</a>
-                    <a class="nav-link" href="/highlight">Highlight</a>
-                    <a class="nav-link" href="/visualization">Visualizations</a>
-                    <a class="nav-link active" href="/prediction">Prediction</a>
+                    <button onclick="location.href='/'" class="nav-link btn btn-primary">Upload</button>
+                    <button onclick="location.href='/highlight'" class="nav-link btn btn-primary">Highlight</button>
+                    <button onclick="location.href='/visualization'" class="nav-link btn btn-primary">Visualizations</button>
+                    <button onclick="location.href='/prediction'" class="nav-link active btn btn-primary">Prediction</button>
                 </div>
+                <div class="authors">by Eldar Shlomi, Or Lifchiz, and David Levine</div>
             </div>
             <div class="col-9">
                 <h1>Prediction</h1>
-                <button onclick="location.href='/predict'">Predict</button>
-                {% if prediction %}
-                    <h2>Prediction: {{ prediction }}</h2>
-                {% endif %}
+                <button onclick="location.href='/prediction'">Prediction</button>
             </div>
         </div>
     </div>
