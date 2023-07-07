@@ -35,4 +35,4 @@ def highlight_important_words(filename):
 
     # Extract entities (words) from the doc and return them
     entities = [ent.text for ent in doc.ents]
-    return entities
+    return clean_text, entities

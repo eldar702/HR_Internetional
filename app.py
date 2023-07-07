@@ -20,9 +20,9 @@ def highlight_route():
         # Use the filename saved in the session
         filename = session.get('filename')
         # Get the list of words to highlight
-        highlighted_words = highlight.highlight_important_words(filename)
+        clean_text, entities = highlight.highlight_important_words(filename)
         # Pass this list to the template
-        return render_template('highlight.html', highlighted_words=highlighted_words)
+        return render_template('highlight.html', clean_text=clean_text, entities=entities)
     else:
         return render_template('highlight.html')
 @app.route('/visualization')

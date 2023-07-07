@@ -21,10 +21,13 @@
                 <form action="/highlight" method="POST">
                     <input type="submit" value="Highlight">
                 </form>
-                {% if highlighted_words %}
+                {% if clean_text %}
+                    <p class="clean-text">{{ clean_text }}</p>
+                {% endif %}
+                {% if entities %}
                     <p>
-                    {% for word in highlighted_words %}
-                        <span class="highlight">{{ word }}</span>
+                    {% for entity in entities %}
+                        <span class="entity">{{ entity }}</span>
                     {% endfor %}
                     </p>
                 {% endif %}
