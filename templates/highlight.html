@@ -18,7 +18,16 @@
             </div>
             <div class="col-9">
                 <h1>Highlight</h1>
-                <button onclick="location.href='/highlight'">Highlight</button>
+                <form action="/highlight" method="POST">
+                    <input type="submit" value="Highlight">
+                </form>
+                {% if highlighted_words %}
+                    <p>
+                    {% for word in highlighted_words %}
+                        <span class="highlight">{{ word }}</span>
+                    {% endfor %}
+                    </p>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ import visualization
 
 def process_file(filename):
     parse_to_csv(filename)
-    highlight.highlight_important_words(filename)
+    # highlight.highlight_important_words(filename)
     # visualization.create_visualization(filename)
 
 def parse_to_csv(filename):

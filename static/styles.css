@@ -83,3 +83,18 @@ input[type="submit"], button {
     width: 380px;
     height: 250px;
 }
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.entity {
+    margin: 5px; /* Add space around each entity */
+    padding: 5px; /* Add space inside each entity */
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    font-weight: bold; /* Make text bold */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Required for applying margins and padding */
+}
