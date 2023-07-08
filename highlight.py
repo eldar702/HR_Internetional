@@ -4,10 +4,16 @@ import pandas as pd
 import chardet
 import re
 import nltk
+import requests
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
 nlp = spacy.load("en_core_web_sm")
+ruler = nlp.add_pipe("entity_ruler")
+
+
+ruler.from_disk('jz_skill_patterns.jsonl')
+
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
