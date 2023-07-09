@@ -44,4 +44,6 @@ def highlight_important_words(filename):
 
     # Extract entities (words) from the doc and return them
     entities = [ent.text for ent in doc.ents]
+    # Remove duplicate entities
+    entities = list(set(entities))
     return clean_text, entities

@@ -96,7 +96,7 @@ input[type="submit"], button {
     margin: 5px; /* Add space around each entity */
     padding: 5px; /* Add space inside each entity */
     background-color: #007bff; /* Set background color */
-    color: red; /* Set text color */ /* #fff   */
+    color: white; /* Set text color */ /* #fff   */
     font-weight: bold; /* Make text bold */
     border-radius: 5px; /* Rounded corners */
     display: inline-block; /* Required for applying margins and padding */
