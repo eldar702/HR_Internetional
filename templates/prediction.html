@@ -12,13 +12,18 @@
                     <button onclick="location.href='/'" class="nav-link btn btn-primary">Upload</button>
                     <button onclick="location.href='/highlight'" class="nav-link btn btn-primary">Highlight</button>
                     <button onclick="location.href='/visualization'" class="nav-link btn btn-primary">Visualizations</button>
-                    <button onclick="location.href='/prediction'" class="nav-link active btn btn-primary">Prediction</button>
+                    <button onclick="location.href='/predict'" class="nav-link active btn btn-primary">Prediction</button>
                 </div>
-                <div class="authors">by Eldar Shlomi, Or Lifchiz, and David Levine</div>
+                <div class="authors">by Eldar Shlomi, Or Lipschits, and David Levin</div>
             </div>
             <div class="col-9">
                 <h1>Prediction</h1>
-                <button onclick="location.href='/prediction'">Prediction</button>
+                {% if prediction %}
+                    <p>Your most suitable profession is: <strong>{{ prediction }}</strong></p>
+                {% else %}
+                    <p>Click the button to predict your most suitable profession.</p>
+                {% endif %}
+                <button onclick="location.href='/predict'">Prediction</button>
             </div>
         </div>
     </div>

@@ -34,7 +34,10 @@ def highlight_important_words(filename):
     # Tokenize, lemmatize and remove stop words
     tokens = raw_text.split()
     lm = WordNetLemmatizer()
-    clean_text = ' '.join(lm.lemmatize(token) for token in tokens if token not in set(stopwords.words("english")))
+
+    # Here we add a regex condition to ensure we only include words with English letters
+    clean_text = ' '.join(lm.lemmatize(token) for token in tokens
+                          if (token not in set(stopwords.words("english"))) and re.search('[a-zA-Z]', token))
 
     # Process the clean text with nlp to extract entities
     doc = nlp(clean_text)

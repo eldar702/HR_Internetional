@@ -3,6 +3,7 @@
 <head>
     <title>Visualizations</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body class="page3">
     <div class="container">
@@ -14,14 +15,36 @@
                     <button onclick="location.href='/visualization'" class="nav-link active btn btn-primary">Visualizations</button>
                     <button onclick="location.href='/prediction'" class="nav-link btn btn-primary">Prediction</button>
                 </div>
-                <div class="authors">by Eldar Shlomi, Or Lifchiz, and David Levine</div>
+                <div class="authors">by Eldar Shlomi, Or Lipschits, and David Levin</div>
             </div>
             <div class="col-9">
                 <h1>Visualizations</h1>
-                <button onclick="location.href='/visualization'">Visualizations</button>
+                <button onclick="loadVisualization()" class="btn btn-primary">Load Visualization</button>
+                <div id="chart"></div>
             </div>
         </div>
     </div>
+    <script>
+        function loadVisualization() {
+            fetch('/load_visualization')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    var img = document.createElement("img");
+                    img.src = data.image_path;
+                    img.alt = "Visualization";
+                    var chartDiv = document.getElementById("chart");
+                    while (chartDiv.firstChild) {
+                        chartDiv.removeChild(chartDiv.firstChild);
+                    }
+                    chartDiv.appendChild(img);
+                })
+                .catch(function (err) {
+                    console.warn('Something went wrong.', err);
+                });
+        }
+    </script>
     <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
 </body>
 </html>
