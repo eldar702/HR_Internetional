@@ -4,8 +4,8 @@ Here's the README file formatted with GitHub-Flavored Markdown for improved read
 
 # Resume Analyzer
 
-![Banner Image](https://github.com/eldar702/HR_International/assets/72104254/1647c3a8-8fb0-4c14-b20b-eba6b7b67ab1.png)
 
+![image](https://github.com/eldar702/HR_Internetional/assets/72104254/ff5b8e89-d512-47fb-a565-f3d0bec29a16)
 
 
 **Resume Analyzer** is a tool powered by machine learning and Natural Language Processing (NLP) techniques, designed to help you discover the most suitable profession based on the content of your resume.
